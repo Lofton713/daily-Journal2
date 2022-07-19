@@ -4,9 +4,10 @@ export const getEntries = () => {
     .then(res => res.json())
 };
 
-export const searchEntries = (searchTerm) => {
-  return fetch(`http://localhost:8088/journal_entries?q=${searchTerm}`)
-    .then(res => res.json())
+export const searchEntries = (search_term) => {
+  return fetch(`http://localhost:8088/journal_entries?q=${search_term}`)
+      .then(res => res.json())
+      .then(getEntries);
 };
 
 export const getEntryById = id => {

@@ -63,7 +63,7 @@ export const EntryList = ({ moods, entries, onEditButtonClick, onDeleteButtonCli
           <Entry
             key={entry.id}
             entry={entry}
-            mood={moods.find(m => m.id === entry.moodId)}
+            mood={moods.find(m => m.id === entry.mood_id)}
             onEditButtonClick={onEditButtonClick}
             onDeleteButtonClick={onDeleteButtonClick}
           />
